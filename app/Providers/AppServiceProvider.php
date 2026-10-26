@@ -28,7 +28,14 @@ class AppServiceProvider extends ServiceProvider
     {
         Paginator::useBootstrap();
 
-        $sebsitefrontdetail = FrontDetial::first();
+        // Runs on every boot, including `artisan package:discover` during the
+        // Vercel build, where the database may not be reachable yet.
+        try {
+            $sebsitefrontdetail = FrontDetial::first();
+        } catch (\Throwable $e) {
+            $sebsitefrontdetail = null;
+        }
+
         View::share('appfrontdetail',$sebsitefrontdetail);
     }
 }
