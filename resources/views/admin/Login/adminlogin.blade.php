@@ -194,6 +194,10 @@
                 </label>
             </div>
             <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+            <div class="text-center mt-3">
+                <span class="small text-muted">Don't have an admin account?</span>
+                <a href="{{ route('adminRegister') }}" class="small text-decoration-none fw-semibold">Register</a>
+            </div>
             {{-- <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2024</p> --}}
         </form>
     </main>

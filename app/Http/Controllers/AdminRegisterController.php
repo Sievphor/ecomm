@@ -27,7 +27,7 @@ class AdminRegisterController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
-            'image' => 'required|image|max:2048',
+            'image' => 'nullable|image|max:2048',
             'email' => [
                 'required',
                 'email',
@@ -44,10 +44,11 @@ class AdminRegisterController extends Controller
         }
     
         // Handle image upload
-        $imageName = time() . '.' . $request->file('image')->getClientOriginalExtension();
-    
-        // Move the image to the public/uploads/profile directory
-        $request->file('image')->move(public_path('uploads/adminprofile'), $imageName);
+        $imageName = null;
+        if ($request->hasFile('image')) {
+            $imageName = time() . '.' . $request->file('image')->getClientOriginalExtension();
+            $request->file('image')->move(public_path('uploads/adminprofile'), $imageName);
+        }
     
         // Create the admin if validation passes
         Admin::create([
@@ -58,7 +59,11 @@ class AdminRegisterController extends Controller
             'role' => 1, // Set admin role
         ]);
     
-        return redirect('admin/admins')->with('message', 'Admin registered successfully!');
+        if (auth()->guard('admin')->check()) {
+            return redirect('admin/admins')->with('message', 'Admin registered successfully!');
+        }
+
+        return redirect('admin/login')->with('message', 'Admin account registered successfully! Please sign in.');
     }
     
     public function edit($id)
