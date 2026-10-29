@@ -1,64 +1,226 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# HOMESPORT — E-Commerce & Store Management Platform
 
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="public/front-assets/homesport-logo.png" alt="HOMESPORT Logo" width="220">
 </p>
 
-## About Laravel
+<p align="center">
+  <strong>A full-featured sports apparel & fitness e-commerce platform built with Laravel 9, Livewire, and modern Bootstrap 5 administrative tooling.</strong>
+</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<p align="center">
+  <img src="https://img.shields.io/badge/Laravel-9.52-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel">
+  <img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP">
+  <img src="https://img.shields.io/badge/Livewire-2.12-FB70A9?style=for-the-badge&logo=livewire&logoColor=white" alt="Livewire">
+  <img src="https://img.shields.io/badge/Bootstrap-5.3-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap">
+  <img src="https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
+</p>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 📖 Overview
 
-## Learning Laravel
+**HOMESPORT** is a comprehensive multi-channel e-commerce platform designed for sports apparel, athletic footwear, and fitness equipment. The project features a dynamic customer shopping experience powered by **Laravel Livewire** and a powerful administrative portal based on the **Sneat** dashboard framework.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+It includes payment processing via **Bakong KHQR**, real-time **Telegram bot alerts**, multi-language localization, customer wishlist & cart management, and automated PDF invoice generation.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## ✨ Key Features
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+### 🛒 Customer Storefront
+* **Product Catalog**: Multi-level categorization (Categories & Sub-categories), brand filters, search, and sort.
+* **Variant System**: Interactive color and size variant selection with live inventory checking.
+* **Real-time Cart & Wishlist**: Livewire-powered instant cart updates, item counters, and slide-in trays without page refreshes.
+* **Discounts & Coupons**: Promotional percentage/fixed coupon validation applied directly at checkout.
+* **Payment Gateways**:
+  * **Bakong KHQR** dynamic QR scanning integration.
+  * Cash on Delivery (COD).
+* **Customer Account**: Profile management, order history, downloadable PDF invoices, and delivery tracking.
+* **Social Authentication**: Google & Facebook OAuth login via Laravel Socialite.
+* **Telegram Notifications**: Real-time order confirmation alerts sent directly to Telegram channels/users.
+* **Multi-Language Support**: Seamless language switching (English & Khmer).
 
-### Premium Partners
+### 🛡️ Administrative Portal
+* **Dashboard Overview**: Key sales metrics, revenue analytics, new orders, and inventory status.
+* **Admin Authentication**:
+  * Modern split-screen **Admin Registration** (`/admin/register`) with live avatar preview, dynamic password strength meters, and confirmation checks.
+  * Dedicated **Admin Login** (`/admin/login`).
+  * Role-based access control (`Super Admin`, `Admin`).
+* **Catalog Management**:
+  * Products (CRUD, multi-image gallery upload, specifications, stock).
+  * Brands, Categories & Sub-Categories.
+  * Colors and Sizes taxonomy.
+* **Order Processing**:
+  * Live status changes (Pending, Processing, Completed, Cancelled).
+  * PDF invoice generation and thermal receipt printing.
+* **Marketing Tools**:
+  * Banner & homepage slider management.
+  * Coupon creation (expiry dates, minimum cart value, usage limits).
+* **Reporting & Export**:
+  * Export sales reports to PDF and Excel (`maatwebsite/excel` & `barryvdh/laravel-dompdf`).
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+---
 
-## Contributing
+## 🛠️ Tech Stack
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+| Layer | Technology |
+|---|---|
+| **Backend Framework** | Laravel 9.x (PHP 8.2+) |
+| **Interactive Components** | Laravel Livewire 2.12 |
+| **Database** | MySQL / MariaDB (UTF8mb4) |
+| **Frontend UI** | Bootstrap 5.3, Phoenix Theme, Sneat Admin Dashboard |
+| **Icons & Typography** | Boxicons, FontAwesome 6, Bootstrap Icons, Public Sans |
+| **Real-time & Broadcast** | Pusher / Laravel Echo |
+| **Notifications & Alerts** | SweetAlert2, Toastr.js, Telegram Bot API |
+| **PDF Generation** | DomPDF & Snappy (wkhtmltopdf) |
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 🚀 Getting Started
 
-## Security Vulnerabilities
+Follow these steps to set up the project locally:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 1. Prerequisites
+Ensure you have the following installed on your machine:
+* **PHP** $\ge$ 8.2 (with `pdo_mysql`, `mbstring`, `openssl`, `curl`, `gd`, `fileinfo` extensions enabled)
+* **Composer** $\ge$ 2.x
+* **MySQL** $\ge$ 8.0 or MariaDB
+* **Node.js** $\ge$ 18.x & **NPM**
 
-## License
+### 2. Clone the Repository
+```bash
+git clone https://github.com/Sievphor/ecomm.git
+cd ecomm
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 3. Install PHP Dependencies
+```bash
+composer install
+```
+
+### 4. Configure Environment
+Copy the example environment file:
+```bash
+cp .env.example .env
+```
+
+Open `.env` and configure your database and application settings:
+```env
+APP_NAME=HOMESPORT
+APP_ENV=local
+APP_KEY=
+APP_DEBUG=true
+APP_URL=http://localhost:8000
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=thesis
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+Generate the unique application key:
+```bash
+php artisan key:generate
+```
+
+### 5. Setup Database
+You can either run standard Laravel migrations:
+```bash
+php artisan migrate
+```
+Or import the complete pre-populated database dump provided in the project root:
+```bash
+mysql -u root -p thesis < thesis-4.sql
+```
+
+### 6. Create Storage Symlink
+Link the public storage directory for user uploads:
+```bash
+php artisan storage:link
+```
+
+### 7. Run the Application
+Start the Laravel local development server:
+```bash
+php artisan serve
+```
+
+The application is now accessible at **[http://localhost:8000](http://localhost:8000)**!
+
+> **Tip:** If port 8000 is occupied by another application, specify an alternate port:
+> ```bash
+> php artisan serve --port=8080
+> ```
+
+---
+
+## 🧭 Key Routes
+
+| Route | Method | Description | Access |
+|---|---|---|---|
+| `/` | `GET` | Store Homepage | Public |
+| `/login` | `GET`, `POST` | Customer Login | Public / Guest |
+| `/register` | `GET`, `POST` | Customer Registration | Public / Guest |
+| `/wishlist` | `GET` | User Wishlist | Authenticated User |
+| `/admin/login` | `GET`, `POST` | Administrator Login | Admin Guest |
+| `/admin/register` | `GET`, `POST` | Administrator Registration | Admin Guest |
+| `/admin/dashboard` | `GET` | Main Administrative Dashboard | Admin Only |
+| `/admin/products` | `GET`, `POST` | Manage Products & Stock | Admin Only |
+| `/admin/orders` | `GET` | Order Processing & Invoicing | Admin Only |
+| `/admin/admins` | `GET` | Admin User Management | Super Admin Only |
+
+---
+
+## 📂 Project Structure
+
+```plaintext
+thesis-4/
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/       # Frontend & Admin Controllers
+│   │   └── Middleware/        # Authentication & Role Gate Guards
+│   ├── Models/                # Eloquent Models (Product, Order, Admin, etc.)
+│   └── View/                  # Blade Components
+├── config/                    # Application configuration
+├── database/
+│   ├── migrations/            # 47 Database schema migrations
+│   └── seeders/               # Initial seeders
+├── public/
+│   ├── admin-das/             # Sneat Admin template assets (CSS, JS, Avatars)
+│   ├── front-assets/          # Storefront branding & media
+│   └── uploads/               # Product, Category & Profile uploads
+├── resources/
+│   ├── views/
+│   │   ├── admin/             # Admin portal views & modals
+│   │   ├── frontend/          # Customer-facing shopping views
+│   │   ├── layouts/           # Admin & App master layouts
+│   │   └── livewire/          # Real-time Livewire Blade components
+├── routes/
+│   ├── web.php                # Web routes & admin middleware groups
+│   └── api.php                # API endpoints
+├── thesis-4.sql               # Full database export
+└── composer.json              # PHP dependencies
+```
+
+---
+
+## 🔒 Security Best Practices
+* Sensitive credentials in `.env` (Telegram bot tokens, mailer secrets, OAuth IDs) are excluded from version control.
+* Passwords are protected using secure `Bcrypt` / `Argon2id` hashing.
+* Multi-guard authentication separates customer sessions (`web`) from staff sessions (`admin`).
+
+---
+
+## 👤 Author
+
+Developed by **Sievphor** ([@Sievphor](https://github.com/Sievphor))  
+*Email:* [tonnsievphor@gmail.com](mailto:tonnsievphor@gmail.com)
+
+---
+
+## 📄 License
+
+This project is open-sourced under the [MIT License](LICENSE).
